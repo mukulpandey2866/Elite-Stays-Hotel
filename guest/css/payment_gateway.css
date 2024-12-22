@@ -1,0 +1,340 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e5b700c9;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 20px;
+    width: calc(100% - 40px);
+    transition: box-shadow 0.3s ease;
+}
+  
+  .navbar .logo img {
+    width: 100px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+    transition: transform 0.3s ease; 
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #e5b800;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transform: translateY(-2px); 
+  }
+  
+  .nav-links li:hover {
+    transform: scale(1.1); 
+  }
+  
+  #auth-link {
+    color: #ffffff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  #auth-link:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px);
+  }
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.payment-header h1 {
+    color: #DAA520; /* Golden color */
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.payment-header p {
+    color: #555;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.payment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Input Fields */
+label {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+    padding-left: 10px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+input:focus, select:focus {
+    border-color: #DAA520; /* Golden focus */
+    outline: none;
+    background-color: #fff;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Buttons */
+button {
+    background-color: #DAA520; /* Golden background */
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b8860b;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Price Summary */
+.price-summary {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.price-summary p {
+    padding: 5px 0;
+}
+
+#total-price {
+    color: #28a745; /* Green for total */
+}
+
+#service-price {
+    color: #dc3545; /* Red for service */
+}
+
+/* Card Section */
+.payment-details {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #ddd;
+}
+
+.payment-details input {
+    width: 100%;
+    max-width: 100%;
+}
+
+.payment-details label {
+    font-size: 1.1rem;
+    color: #444;
+    text-align: left;
+}
+
+.card-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.card-container input {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.card-container input:focus {
+    border-color: #DAA520;
+    outline: none;
+}
+
+#card-number {
+    letter-spacing: 1px;
+}
+
+.card-number, .expiry-date, .cvv {
+    font-size: 1.1rem;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.message.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.message.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+.premium-footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #ffd700; /* Golden text color */
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffd700; /* Golden header color */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b8860b;
+}
+
+.footer-amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-amenities li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #b8860b;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social .social-icon {
+    color: #b8860b; /* Golden color for social icons */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #fff; /* Change to white on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff; /* White text for bottom copyright */
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+

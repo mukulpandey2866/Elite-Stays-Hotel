@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e5b700c9;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 20px;
+    width: calc(100% - 40px);
+    transition: box-shadow 0.3s ease;
+}
+  
+  .navbar .logo img {
+    width: 100px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+    transition: transform 0.3s ease; 
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #e5b800;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transform: translateY(-2px); 
+  }
+  
+  .nav-links li:hover {
+    transform: scale(1.1); 
+  }
+  
+  #auth-link {
+    color: #ffffff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  #auth-link:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px);
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #b89b4f;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #b89b4f;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="date"] {
+    width: auto;
+  }
+  
+  button {
+    background-color: #b89b4f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a5853e;
+  }
+  
+  .back-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    background-color: #b89b4f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #a5853e;
+  }
+  
+  #error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+
+  .premium-footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #ffd700; /* Golden text color */
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffd700; /* Golden header color */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b8860b;
+}
+
+.footer-amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-amenities li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #b8860b;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social .social-icon {
+    color: #b8860b; /* Golden color for social icons */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #fff; /* Change to white on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff; /* White text for bottom copyright */
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+

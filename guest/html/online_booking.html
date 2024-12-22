@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Stays - Online Booking</title>
+  <link rel="icon" href="../assets/favicon1.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/online_booking.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+          <a href="guest_home.html">
+            <img src="../assets/logo.png" alt="Hotel Logo">
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="online_booking.html" class="protected-link">Online Booking</a></li>
+          <li><a href="checkin_checkout.html" class="protected-link">Check-in/Checkout</a></li>
+          <li><a href="room_service.html" class="protected-link">Room Service</a></li>
+          <li><a href="payment_gateway.html" class="protected-link">Payment Gateway</a></li>
+          <li><a href="feedback.html" class="protected-link">Feedback</a></li>
+          <li><a id="auth-link" href="signup_login.html">Sign Up / Login</a></li>
+        </ul>
+      </nav>
+  </header>
+
+
+  <!-- Booking Form -->
+  <div class="form-container">
+    <h2>Book Your Stay</h2>
+    <form id="booking-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="room-type">Room Type</label>
+      <select id="room-type" required>
+        <option value="" disabled selected>Select Room Type</option>
+        <option value="Standard">Standard</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Suite">Suite</option>
+      </select>
+
+      <label for="check-in">Check-in Date</label>
+      <input type="date" id="check-in" required>
+
+      <label for="check-out">Check-out Date</label>
+      <input type="date" id="check-out" required>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <!-- Error message container -->
+    <div id="error-message" style="display: none; color: red;"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="premium-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+          <a href="guest_home.html">
+            <img src="../assets/logo.png" height="60px"/>
+          </a>
+            <h3>About Us</h3>
+            <p>We are committed to providing luxurious and comfortable stays. Experience the finest hospitality with world-class amenities and services tailored to your needs.</p>
+        </div>
+
+        <div class="footer-amenities">
+            <h3>Amenities</h3>
+            <ul>
+                <li>Free Wi-Fi</li>
+                <li>Swimming Pool</li>
+                <li>Spa & Wellness Center</li>
+                <li>Restaurant & Bar</li>
+                <li>Gym & Fitness Center</li>
+                <li>24/7 Concierge Service</li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">Instagram</a>
+                <a href="https://x.com/" target="_blank" class="social-icon">Twitter</a>
+                <a href="https://in.linkedin.com/" target="_blank" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Elite Stays Hotel. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="../js/online_booking.js"></script>
+</body>
+</html>

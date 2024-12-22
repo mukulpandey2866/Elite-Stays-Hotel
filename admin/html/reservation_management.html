@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Stays - Reservation Management</title>
+    <link rel="stylesheet" href="../css/reservation_management.css" />
+    <link rel="icon" href="../assets/favicon1.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Elite Stays Logo" />
+      </div>
+      <a href="javascript:history.back()" class="back-btn">Back</a>
+    </header>
+
+    <main class="main-container">
+      <h1 class="page-title">Reservation Management</h1>
+      <p class="page-description">
+        Manage and track reservations with ease, including cancellations and
+        modifications.
+      </p>
+
+      <div class="actions">
+        <button
+          class="btn add-reservation-btn"
+          onclick="openAddReservationForm()"
+        >
+          Add New Reservation
+        </button>
+      </div>
+
+      <section class="reservation-list" id="reservation-list"></section>
+    </main>
+
+    <div id="add-reservation-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeAddReservationForm()">×</span>
+        <h2 id="form-title">Add New Reservation</h2>
+        <form id="add-reservation-form">
+          <label for="customer-name">Customer Name:</label>
+          <input type="text" id="customer-name" required />
+
+          <label for="customer-photo">Customer Photo URL:</label>
+          <input type="url" id="customer-photo" required />
+
+          <label for="room-number">Room Number:</label>
+          <input type="number" id="room-number" required />
+
+          <label for="check-in-date">Check-in Date:</label>
+          <input type="date" id="check-in-date" required />
+
+          <label for="check-out-date">Check-out Date:</label>
+          <input type="date" id="check-out-date" required />
+
+          <button type="submit" id="submit-button">Add Reservation</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/reservation_management.js"></script>
+  </body>
+</html>

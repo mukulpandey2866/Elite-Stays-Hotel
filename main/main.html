@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Stays</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="assets/favicon1.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/logo.png" />
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Welcome to Elite Stays</h1>
+      <div class="buttons">
+        <button class="btn admin-btn" id="admin-btn">Admin</button>
+        <a href="../guest/html/guest_home.html" class="btn guest-btn">Guest</a>
+      </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal hidden" id="admin-modal">
+      <div class="modal-content">
+        <h2>Admin Login</h2>
+        <form id="admin-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+          <button type="submit" class="btn access-btn">Access</button>
+        </form>
+        <p id="error-message" class="error-message hidden">Unauthorized person. Access denied!</p>
+        <button class="btn close-btn" id="close-modal">Close</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

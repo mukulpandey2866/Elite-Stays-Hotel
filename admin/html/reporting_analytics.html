@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Stays - Reporting & Analytics</title>
+    <link rel="stylesheet" href="../css/reporting_analytics.css" />
+    <link rel="icon" href="../assets/favicon1.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Elite Stays Logo" />
+      </div>
+      <a href="javascript:history.back()" class="back-btn">Back</a>
+    </header>
+
+    <main class="main-container">
+      <h1 class="page-title">Reporting & Analytics</h1>
+      <p class="page-description">
+        Generate detailed reports on occupancy rates, revenue, and guest
+        satisfaction to optimize business performance.
+      </p>
+
+      <div class="analytics-container" style="display: none">
+        <div class="report">
+          <h2>Occupancy Rates</h2>
+          <div id="occupancy-rate"></div>
+          <canvas id="occupancyChart" width="200" height="100"></canvas>
+        </div>
+
+        <div class="report">
+          <h2>Revenue</h2>
+          <div id="revenue"></div>
+          <canvas id="revenueChart" width="200" height="100"></canvas>
+        </div>
+
+        <div class="report">
+          <h2>Guest Satisfaction</h2>
+          <div id="guest-satisfaction"></div>
+          <canvas id="satisfactionChart" width="200" height="100"></canvas>
+        </div>
+      </div>
+
+      <button class="btn generate-report-btn" onclick="generateReports()">
+        Generate Reports
+      </button>
+    </main>
+
+    <script src="../js/reporting_analytics.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Stays - Billing and Payments</title>
+    <link rel="stylesheet" href="../css/billing_payments.css" />
+    <link rel="icon" href="../assets/favicon1.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Elite Stays Logo" />
+      </div>
+      <a href="javascript:history.back()" class="back-btn">Back</a>
+    </header>
+
+    <main class="main-container">
+      <h1 class="page-title">Billing and Payments</h1>
+      <p class="page-description">
+        View and manage your billing and payment details here. Dynamic pricing
+        is applied based on your selections.
+      </p>
+
+      <section class="pricing-section">
+        <h2 class="pricing-title">Select Your Stay</h2>
+        <div class="pricing-options">
+          <label for="room-type">Room Type:</label>
+          <select id="room-type">
+            <option value="standard">Standard Room - $100/night</option>
+            <option value="deluxe">Deluxe Room - $150/night</option>
+            <option value="suite">Suite - $200/night</option>
+          </select>
+
+          <label for="duration">Duration (nights):</label>
+          <input type="number" id="duration" value="1" min="1" />
+
+          <label for="season">Season:</label>
+          <select id="season">
+            <option value="low">Low Season</option>
+            <option value="high">High Season</option>
+          </select>
+        </div>
+
+        <h3>Total Cost: <span id="total-cost">$100</span></h3>
+
+        <button class="btn" onclick="calculateTotal()">Update Price</button>
+      </section>
+
+      <section class="payment-section">
+        <h2 class="payment-title">Payment</h2>
+        <form id="payment-form">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" required />
+
+          <label for="card-expiry">Expiry Date:</label>
+          <input type="text" id="card-expiry" required />
+
+          <label for="card-cvc">CVC:</label>
+          <input type="text" id="card-cvc" required />
+
+          <button type="submit" class="btn">Proceed to Payment</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="../js/billing_payments.js"></script>
+  </body>
+</html>

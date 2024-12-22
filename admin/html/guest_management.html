@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Stays - Guest Management</title>
+    <link rel="stylesheet" href="../css/guest_management.css" />
+    <link rel="icon" href="../assets/favicon1.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Elite Stays Logo" />
+      </div>
+      <a href="javascript:history.back()" class="back-btn">Back</a>
+    </header>
+
+    <main class="main-container">
+      <h1 class="page-title">Elite Stays - Guest Management</h1>
+      <p class="page-description">
+        Manage and track guest records, including personal information, booking
+        history, and preferences.
+      </p>
+
+      <div class="actions">
+        <button class="btn add-guest-btn" onclick="openAddGuestForm()">
+          Add New Guest
+        </button>
+      </div>
+
+      <section class="guest-list" id="guest-list"></section>
+    </main>
+
+    <div id="add-guest-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeAddGuestForm()">×</span>
+        <h2 id="form-title">Add New Guest</h2>
+        <form id="add-guest-form">
+          <label for="guest-name">Guest Name:</label>
+          <input type="text" id="guest-name" required />
+
+          <label for="guest-photo">Guest Photo URL:</label>
+          <input type="url" id="guest-photo" required />
+
+          <label for="contact-info">Contact Information:</label>
+          <input type="text" id="contact-info" required />
+
+          <label for="preferences">Guest Preferences:</label>
+          <textarea id="preferences" required></textarea>
+
+          <label for="booking-history"
+            >Booking History (comma separated):</label
+          >
+          <textarea id="booking-history" required></textarea>
+
+          <button type="submit" id="submit-button">Add Guest</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/guest_management.js"></script>
+  </body>
+</html>
