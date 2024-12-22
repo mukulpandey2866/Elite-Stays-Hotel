@@ -194,7 +194,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-# Feedback model
+# Feedback model use
 class Feedback(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
