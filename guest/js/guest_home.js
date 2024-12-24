@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const logoutBtn = document.getElementById("logout-btn");
   const authLink = document.getElementById("auth-link");
+  const slides = document.querySelectorAll(".slide");
+  const slidesContainer = document.querySelector(".slides");
+  let slideIndex = 0;
+
+  function showSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  showSlide();
+  setInterval(showSlide, 5000);
+
 
   try {
     const response = await fetch("http://127.0.0.1:5000/guest_home");
@@ -34,6 +49,189 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error:", error);
   }
 });
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", async () => {
+//   const logoutBtn = document.getElementById("logout-btn");
+//   const authLink = document.getElementById("auth-link");
+
+  // const slides = document.querySelectorAll(".slide");
+  // const slidesContainer = document.querySelector(".slides");
+  // let slideIndex = 0;
+
+  // function showSlide() {
+  //   slideIndex++;
+  //   if (slideIndex >= slides.length) {
+  //     slideIndex = 0;
+  //   }
+  //   slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  // }
+
+  // showSlide();
+  // setInterval(showSlide, 5000);
+
+
+
+
+
+
+
+  
+  // const protectedLinks = document.querySelectorAll(".protected-link");
+  // const user = JSON.parse(localStorage.getItem("user"));
+
+  // // Authorization logic
+  // if (user) {
+  //   authLink.textContent = "Logout";
+  //   authLink.href = "#";
+  //   authLink.addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     const isConfirmed = confirm("Are you sure you want to logout?");
+  //     if (isConfirmed) {
+  //       localStorage.removeItem("user");
+  //       window.location.href = "guest_home.html";
+  //     }
+  //   });
+  // } else {
+  //   authLink.textContent = "Sign Up / Login";
+  //   authLink.href = "signup_login.html";
+  // }
+
+  // // Restrict access to protected links
+  // protectedLinks.forEach((link) => {
+  //   link.addEventListener("click", (e) => {
+  //     if (!user) {
+  //       e.preventDefault();
+  //       alert("Please sign up or log in to access this page.");
+  //       window.location.href = "signup_login.html";
+  //     }
+  //   });
+  // });
+
+//   try {
+//     const response = await fetch("http://127.0.0.1:5000/guest_home");
+//     const data = await response.json();
+
+//     if (response.ok && data.loggedIn) {
+//       logoutBtn.style.display = "inline-block"; // Show logout button
+//       authLink.style.display = "none"; // Hide signup/login link
+//     } else {
+//       logoutBtn.style.display = "none"; // Hide logout button
+//       authLink.style.display = "inline-block"; // Show signup/login link
+//     }
+
+//     // Logout logic
+//     logoutBtn.addEventListener("click", async () => {
+//       const logoutResponse = await fetch("http://127.0.0.1:5000/logout", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//       });
+
+//       const logoutData = await logoutResponse.json();
+//       if (logoutResponse.ok) {
+//         alert(logoutData.message);
+//         window.location.href = "signup_login.html";
+//       } else {
+//         alert("Error during logout.");
+//       }
+//     });
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// });
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", async () => {
+//   const logoutBtn = document.getElementById("logout-btn");
+//   const authLink = document.getElementById("auth-link");
+
+//   const slides = document.querySelectorAll(".slide");
+//   const slidesContainer = document.querySelector(".slides");
+//   let slideIndex = 0;
+  
+//   function showSlide() {
+//     slideIndex++;
+//     if (slideIndex >= slides.length) {
+//       slideIndex = 0;
+//     }
+  
+//     slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+//   }
+  
+//   showSlide();
+  
+//   setInterval(showSlide, 5000);
+
+//   // const authLink = document.getElementById("auth-link");
+//   const protectedLinks = document.querySelectorAll(".protected-link");
+//   const user = JSON.parse(localStorage.getItem("user"));
+  
+//   if (user) {
+//     authLink.textContent = "Logout";
+//     authLink.href = "#";
+//     authLink.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       const isConfirmed = confirm("Are you sure you want to logout?");
+//       if (isConfirmed) {
+//         localStorage.removeItem("user");
+//         window.location.href = "guest_home.html";
+//       }
+//     });
+//   } else {
+//     authLink.textContent = "Sign Up / Login";
+//     authLink.href = "signup_login.html";
+//   }
+  
+//   protectedLinks.forEach((link) => {
+//     link.addEventListener("click", (e) => {
+//       if (!user) {
+//         e.preventDefault();
+//         alert("Please sign up or log in to access this page.");
+//         window.location.href = "signup_login.html";
+//       }
+//     });
+//   });
+
+  
+//   try {
+//     const response = await fetch("http://127.0.0.1:5000/guest_home");
+//     const data = await response.json();
+
+//     if (response.ok && data.loggedIn) {
+//       // User is logged in
+//       logoutBtn.style.display = "inline-block"; // Show logout button
+//       authLink.style.display = "none"; // Hide signup/login link
+//     } else {
+//       logoutBtn.style.display = "none"; // Hide logout button
+//       authLink.style.display = "inline-block"; // Show signup/login link
+//     }
+
+//     // Logout logic
+//     logoutBtn.addEventListener("click", async () => {
+//       const logoutResponse = await fetch("http://127.0.0.1:5000/logout", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//       });
+
+//       const logoutData = await logoutResponse.json();
+//       if (logoutResponse.ok) {
+//         alert(logoutData.message);
+//         window.location.href = "signup_login.html";
+//       } else {
+//         alert("Error during logout.");
+//       }
+//     });
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// });
 
 
 
